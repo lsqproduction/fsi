@@ -28,7 +28,9 @@ npx clasp login
 npx clasp create  
 ```
 
-Choose `webapp` ![Clasp Create Webapp](images/clasp-create-selection.png)
+Choose `webapp` 
+
+![Clasp Create Webapp](images/clasp-create-selection.png)
 
 When you run `npx clasp create` a .clasp.json is created. Inside of the file, add the property: `"rootDir": "./dist"
 
@@ -51,7 +53,7 @@ npm run deploy
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
-2 Files should be added to your apps script project:
+The following files files should be added to your apps script project:
 - code.HASH
 - index.html
 
