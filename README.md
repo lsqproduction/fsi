@@ -43,7 +43,7 @@ When you run `npx clasp create` a .clasp.json is created. Inside of the file, ad
 **4.** Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
 Note: You can update the scopes while you are working on the project (you may not know all the scopes you will need initially)
 
-1. Deploy the project (development)
+**5.** Deploy the project (development)
 
 ```
 npm run deploy
@@ -51,19 +51,33 @@ npm run deploy
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
-**6.** Deploy the project (production mode)
+2 Files should be added to your apps script project:
+- code.HASH
+- index.html
+
+![file-tree](images/file-tree.png)
+
+**6.** Check the Web App
+
+On the apps script project page (script.google.com) visit: Publish -> Deploy as web app
+    - Select the "Current Web app URL and visit the page
+
+![Web-App-Test-URL](images/Web-App-Test-URL.png)
+
+This is the representation of the page:
+
+![Starter Page Layout](images/starter-page-layout.png)
+
+
+**7.** Deploy the project (production mode)
 
 ```
 npm run deploy:prod
 ```
 
-![Google Apps Script - Setup Development Environment](images/npm-install.gif)
-
 #### Enable JavaScript v8 Runtime
 
 Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
-
-![Google Apps Script - v8 Runtime](images/apps-script-v8.png)
 
 #### Development vs Production mode
 
@@ -76,8 +90,6 @@ The `.claspignore` file allows you to specify file and directories that you do n
 The default `.claspignore` file in the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
 
 ## :beginner: Using Git with Google Apps Script
-
-![Google Apps Script - Github](images/github-apps-script.png)
 
 Create a new repository in Github and make a note of the URL of the new repository. Next, open the terminal and run the above commands to push your Apps Script project to Github.
 
