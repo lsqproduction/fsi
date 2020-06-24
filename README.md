@@ -1,11 +1,13 @@
-# Google Apps Script Development 💯
+# Google Apps Script Development 
 
 The Google Apps Script Starker kit supports the new **V8 JavaScript runtime** that powers Chrome and Node.js. You can write code using modern ECMAScript syntax like Arrow functions, Classes, Template Literals, Destructuring and more.
 
 
 You can build GSuite add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
 
-### :package: Getting Started
+Here is a link to the [Official Google Apps Script Documentation](https://developers.google.com/apps-script)
+
+### Getting Started
 
 **1.** Clone the repository and install npm dependencies and [utilities](TOOLS.md).
 
@@ -32,7 +34,7 @@ Choose `webapp`
 
 ![Clasp Create Webapp](images/clasp-create-selection.png)
 
-When you run `npx clasp create` a .clasp.json is created. Inside of the file, add the property: `"rootDir": "./dist"
+When you run `npx clasp create` a `.clasp.json` file is created. Inside of the file, add the property: `"rootDir": "./dist"
 
 ```js
 {
