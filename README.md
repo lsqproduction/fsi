@@ -2,7 +2,6 @@
 
 The Google Apps Script Starker kit supports the new **V8 JavaScript runtime** that powers Chrome and Node.js. You can write code using modern ECMAScript syntax like Arrow functions, Classes, Template Literals, Destructuring and more.
 
-![Google Apps Script Development with ES6](images/google-apps-script-development.png)
 
 You can build GSuite add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
 
@@ -15,6 +14,7 @@ git clone `this repo` my-project
 cd my-project
 npm install
 ```
+Note: If you experience a `node-gyp` error you should be okay to proceed.
 
 **2.** Log in to Google clasp and authorize using your Google account.
 
@@ -25,10 +25,23 @@ npx clasp login
 **3.** Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
 
 ```
-npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
+npx clasp create  
+```
+
+Choose `webapp` ![Clasp Create Webapp](images/clasp-create-selection.png)
+
+When you run `npx clasp create` a .clasp.json is created. Inside of the file, add the property: `"rootDir": "./dist"
+
+```js
+{
+    "scriptId": "ID-OF-APPS-SCRIPT-PROJECT",
+    "rootDir": "./dist"
+}
+
 ```
 
 **4.** Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
+Note: You can update the scopes while you are working on the project (you may not know all the scopes you will need initially)
 
 1. Deploy the project (development)
 
