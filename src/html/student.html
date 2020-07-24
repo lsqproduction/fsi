@@ -7,21 +7,181 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+<!-- Name [Input Box]
 
+
+
+How was the workshop material for this workshop? [1-5, 5 is the best]
+How was the review for this workshop (if applicable) [1-5, 5 is the best]?
+-->
 <body>
   <div class="container">
     <div class="section">
-      <h4>Student</h4>
-      <p>Please choose whether you are a student or instructor</p>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="name">Please Enter Your Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="workshop_name" type="text" class="validate">
+              <label for="workshop_name">Workshop Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="cohort_name" type="text" class="validate">
+              <label for="cohort_name">Cohort Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <p class="grey-text">How was the lecture for this workshop?</p>
+            </div>
+              <div class="col s2">
+                <label>
+                  <input class="with-gap" name="lecture" type="radio" value="5"/>
+                  <span>5 🥳</span>
+                </label>
+              </div>
+              <div class="col s2">
+                <label>
+                  <input class="with-gap" name="lecture" type="radio" value="4"/>
+                  <span>4</span>
+                </label>
+              </div>
+              <div class="col s2">
+                <label>
+                  <input class="with-gap" name="lecture" type="radio" value="3"/>
+                  <span>3</span>
+                </label>
+              </div>
+              <div class="col s2">
+                <label>
+                  <input class="with-gap" name="lecture" type="radio" value="2" />
+                  <span>2</span>
+                </label>
+              </div>
+              <div class="col s2">
+                <label>
+                  <input class="with-gap" name="lecture" type="radio" value="1"/>
+                  <span>1 😭</span>
+                </label>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <p class="grey-text">How was the workshop material for this workshop?</p>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="material" type="radio" value="5"/>
+                <span>5 🥳</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="material" type="radio" value="4"/>
+                <span>4</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="material" type="radio" value="3" />
+                <span>3</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="material" type="radio" value="2"/>
+                <span>2</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="material" type="radio" value="1" />
+                <span>1 😭</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <p class="grey-text">How was the review for this workshop?</p>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="review" type="radio" value="5"/>
+                <span>5 🥳</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="review" type="radio" value="4" />
+                <span>4</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="review" type="radio" value="3" />
+                <span>3</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="review" type="radio" value="2" />
+                <span>2</span>
+              </label>
+            </div>
+            <div class="col s2">
+              <label>
+                <input class="with-gap" name="review" type="radio" value="1" />
+                <span>1 😭</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="improvement" class="materialize-textarea"></textarea>
+                  <label for="improvement">How would you improve the workshop?</label>
+                </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <button type="button" onclick="displayRadioValue()">
+        Submit
+      </button>
+      <div id="result"></div>
+
+      <script>
+        function displayRadioValue() {
+          var ele = document.getElementsByName('review');
+
+          for (i = 0; i < ele.length; i++) {
+            if (ele[i].checked)
+              document.getElementById("result").innerHTML
+                = "review: " + ele[i].value;
+          }
+        }
+      </script>
 
     </div>
   </div>
-  <script>
-    function studentClicked() {
-      // google.script.run.student();
-      Document.get
-    }
-  </script>
+
 </body>
 
 </html>
